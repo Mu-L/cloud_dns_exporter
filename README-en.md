@@ -131,6 +131,7 @@ record_cert_info{
 
 ## Supported DNS service providers
 
+- [x] Custom Records
 - [x] Tencent DnsPod
 - [x] Aliyun Dns
 - [x] Godaddy
