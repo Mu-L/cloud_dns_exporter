@@ -167,10 +167,12 @@ func (c *Metrics) Collect(ch chan<- prometheus.Metric) {
 		recordCertInfoCacheValue, err := public.CertCache.Get(recordCertInfoCacheKey)
 		if err != nil {
 			logger.Error(fmt.Sprintf("[ %s ] get record list failed: %v", recordCertInfoCacheKey, err))
+			return
 		}
 		err = json.Unmarshal(recordCertInfoCacheValue, &recordCerts)
 		if err != nil {
 			logger.Error(fmt.Sprintf("[ %s ] json.Unmarshal error: %v", recordCertInfoCacheKey, err))
+			return
 		}
 		for _, v := range recordCerts {
 			ch <- prometheus.MustNewConstMetric(c.metrics[public.RecordCertInfo], prometheus.GaugeValue, float64(v.DaysUntilExpiry), v.CloudProvider, v.CloudName, v.DomainName, v.RecordID, v.FullRecord, v.SubjectCommonName, v.SubjectOrganization, v.SubjectOrganizationalUnit, v.IssuerCommonName, v.IssuerOrganization, v.IssuerOrganizationalUnit, v.CreatedDate, v.ExpiryDate, fmt.Sprintf("%t", v.CertMatched), v.ErrorMsg)
