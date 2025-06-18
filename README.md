@@ -133,6 +133,7 @@ record_cert_info{
 
 ## 已支持 DNS 服务商
 
+- [x] Custom Records
 - [x] Tencent DnsPod
 - [x] Aliyun Dns
 - [x] Godaddy
