@@ -5,7 +5,7 @@ ENV GOPROXY="https://goproxy.io"
 
 ADD . .
 
-RUN apk add upx && make build-linux && upx -9 cloud_dns_exporter
+RUN apk add upx make && make build-linux && upx -9 cloud_dns_exporter
 
 FROM docker.cnb.cool/znb/images/alpine:3.22
 
