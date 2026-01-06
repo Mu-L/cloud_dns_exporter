@@ -15,8 +15,8 @@ require (
 	github.com/aws/aws-sdk-go-v2/service/route53domains v1.25.6
 	github.com/charmbracelet/log v0.2.2
 	github.com/cloudflare/cloudflare-go v0.103.0
+	github.com/dromara/carbon/v2 v2.6.15
 	github.com/go-resty/resty/v2 v2.14.0
-	github.com/golang-module/carbon/v2 v2.6.9
 	github.com/prometheus/client_golang v1.16.0
 	github.com/robfig/cron/v3 v3.0.1
 	github.com/rs/xid v1.6.0
@@ -39,7 +39,6 @@ require (
 	github.com/aws/aws-sdk-go-v2/internal/endpoints/v2 v2.6.17 // indirect
 	github.com/aws/smithy-go v1.20.4 // indirect
 	github.com/clbanning/mxj/v2 v2.5.5 // indirect
-	github.com/dromara/carbon/v2 v2.6.15 // indirect
 	github.com/goccy/go-json v0.10.3 // indirect
 	github.com/google/go-querystring v1.1.0 // indirect
 	github.com/inconshreveable/mousetrap v1.1.0 // indirect
