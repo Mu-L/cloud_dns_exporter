@@ -35,6 +35,10 @@ services:
 
 # 示例配置
 configs:
+  # 定时任务配置（可选，不配置则使用默认值）
+  cron_config:
+    domain_record_sync_interval: 30   # 域名记录同步间隔（秒），默认30秒
+    cert_info_sync_interval: 3600    # 证书信息同步间隔（秒），默认3600秒（1小时）
   # 云解析配置,以阿里云DNS为例
   cloud_dns_exporter_config:
     content: |
